@@ -1,0 +1,123 @@
+{
+  "contracts": {
+    "DIDContract": {
+      "name": "DIDContract",
+      "contractInstance": {
+        "name": "DIDContract"
+      },
+      "transactions": [
+        {
+          "name": "initLedger"
+        },
+        {
+          "name": "CreateDID",
+          "parameters": [
+            {
+              "name": "did",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "longFormDid", 
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "documentJSON",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateDID",
+          "parameters": [
+            {
+              "name": "did",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "updatedDocumentJSON",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "operationSignature",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RecoverDID",
+          "parameters": [
+            {
+              "name": "did",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "newDocumentJSON",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "recoverySignature",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GetDID",
+          "parameters": [
+            {
+              "name": "did",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ListDIDs",
+          "parameters": [
+            {
+              "name": "startKey",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "endKey",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GetDIDHistory",
+          "parameters": [
+            {
+              "name": "did",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
